@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3000')
+const socket = io('http://0.0.0.0:3000')
 
 
 const messageContainer=document.getElementById('message-container')
