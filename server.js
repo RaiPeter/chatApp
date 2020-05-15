@@ -8,6 +8,7 @@ io.on('connection', socket =>{
         users[socket.id]=name
         socket.broadcast.emit('user-connected',name)
     })
+
     
     socket.emit('chat-messagae','Hello World')
 
@@ -23,4 +24,8 @@ io.on('connection', socket =>{
         delete users[socket.id]
     })
 
+
+    socket.on('typing', function(data){
+       socket.broadcast.emit('typing', data);
+    });
 })

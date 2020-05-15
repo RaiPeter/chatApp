@@ -1,34 +1,152 @@
 body {
     padding: 0;
+    box-sizing: border-box;
     margin: 0;
     display: flex;
     justify-content: center;
-  }
+    font-family: Helvetica, sans-serif;
+}
 
-  #message-container {
-    width: 80%;
+#message-container {
+    width: 50%;
+    height: 80vh;
     max-width: 1200px;
-  }
+    margin-top: 20px;
+    overflow-y: scroll;
+}
 
-  #message-container div {
-    background-color: #CCC;
-    padding: 5px;
-  }
-
-  #message-container div:nth-child(2n) {
-    background-color: #FFF;
-  }
-
-  #send-container {
+#message-container div {
+    height: 30px;
+    margin-top: 30px;
+    
+}
+#send-container {
     position: fixed;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     bottom: 0;
     background-color: white;
     max-width: 1200px;
-    width: 80%;
+    width: 50%;
     display: flex;
-  }
+}
+#send-button{
+    position: absolute;
+    right: 0;
+    height: 48%;
+    border: none;
+    outline: none;
+    border-bottom-right-radius:20px ;
+    border-top-right-radius:20px ;
+    font-size: 1.3rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(209, 43, 43);
+    text-align: center;
+}
 
-  #message-input {
+#message-input {
     flex-grow: 1;
-  }
+    font-size: 1.3rem;
+    padding: 10px 100px 10px 20px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 5px ;    
+}
+
+#connected {
+    
+    display: flex;
+    justify-content: center;
+}
+#connected div{
+    background-color:rgba(29, 214, 29, 0.616);
+    padding: 5px 10px;
+    height: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+#disconnected{
+    display: flex;
+    justify-content: center;
+    
+}
+#disconnected div{
+    background-color:rgba(255, 0, 0, 0.466);
+    padding: 5px 10px;
+    height: 20px;
+    border-radius: 20px;  
+    box-shadow: 0px 0px 5px;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+
+.myMessage{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.3rem;
+}
+.myMessage div{
+    background-color: rgba(22, 106, 216, 0.568);
+    box-shadow: 0px 0px 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 10px 15px  10px 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.theirMessage{
+    display: flex;
+    font-size: 1.3rem;
+    justify-content: flex-start;
+}
+.theirMessage div{
+    background-color: rgba(158, 157, 157, 0.712);
+    padding: 10px 30px 10px 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 0px 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* //scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* 
+typing */
+#status{
+    position: absolute;
+    margin-top: -25px; 
+    margin-left: 25px; 
+    font-size: 1.2rem;
+    color: rgba(245, 60, 3, 0.918);
+     left: 0;
+     transition: margin-left 0.5s ease;
+    }
