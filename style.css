@@ -150,7 +150,7 @@ typing */
 }
 
 /* Media queries */
-@media(max-width:360px){
+@media(max-width:380px){
     #message-container{
         width: 90%;
         height: 80vh;
