@@ -17,8 +17,7 @@ body {
 
 #message-container div {
     height: 30px;
-    margin-top: 30px;
-    
+    margin-top: 30px;  
 }
 #send-container {
     position: fixed;
@@ -67,7 +66,6 @@ body {
     box-shadow: 0px 0px 5px;
     font-size: 15px;
     font-weight: 600;
-    
 }
 #disconnected{
     display: flex;
@@ -147,6 +145,83 @@ typing */
     margin-left: 25px; 
     font-size: 1.2rem;
     color: rgba(245, 60, 3, 0.918);
-     left: 0;
-     transition: margin-left 0.5s ease;
+    left: 0;
+    transition: margin-left 0.5s ease;
+}
+
+/* Media queries */
+@media(max-width:360px){
+    #message-container{
+        width: 90%;
+        height: 80vh;
+        /* background-color: firebrick; */
+        margin-top: 10px;
+        overflow-y: scroll;
     }
+    
+    #message-container div {
+        height: 15px;
+        margin-top: 20px;  
+    }
+    .myMessage{
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1rem;
+    }
+    .myMessage div{
+        /* background-color: rgba(22, 106, 216, 0.568); */
+        /* box-shadow: 0px 0px 5px; */
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        padding: 5px 10px  5px 15px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .theirMessage{
+        display: flex;
+        font-size: 1rem;
+        justify-content: flex-start;
+    }
+    .theirMessage div{
+        /* background-color: rgba(158, 157, 157, 0.712); */
+        padding: 5px 15px 5px 10px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        /* box-shadow: 0px 0px 5px; */
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
+    
+#connected {
+    display: flex;
+    justify-content: center;
+}
+#connected div{
+    background-color:rgba(29, 214, 29, 0.616);
+    padding: 5px 10px;
+    height: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+#disconnected{
+    display: flex;
+    justify-content: center;
+    
+}
+#disconnected div{
+    background-color:rgba(255, 0, 0, 0.466);
+    padding: 5px 10px;
+    height: 20px;
+    border-radius: 20px;  
+    box-shadow: 0px 0px 5px;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+
+}
