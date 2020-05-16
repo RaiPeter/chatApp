@@ -201,27 +201,74 @@ typing */
 }
 #connected div{
     background-color:rgba(29, 214, 29, 0.616);
-    padding: 5px 10px;
+    /* padding: 5px 10px; */
     height: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0px 0px 5px;
     font-size: 0.8rem;
-    font-weight: 500;
+    /* font-weight: 600; */
 }
 #disconnected{
     display: flex;
     justify-content: center;
-    
 }
 #disconnected div{
     background-color:rgba(255, 0, 0, 0.466);
-    padding: 5px 10px;
-    height: 20px;
-    border-radius: 20px;  
-    box-shadow: 0px 0px 5px;
-    font-size: 15px;
-    font-weight: 600;
-    
+    /* padding: 5px 10px; */
+    height: 15px;
+    border-radius: 10px;  
+    /* box-shadow: 0px 0px 5px; */
+    font-size: 0.8rem;
+    /* font-weight: 600;    */
 }
+
+#send-container {
+    position: fixed;
+    padding-bottom: 50px;
+    bottom: 0;
+    height: 2rem;
+    background-color: white;
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+}
+#send-button{
+    position: absolute;
+    right: 0;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-bottom-right-radius:15px ;
+    border-top-right-radius:15px ;
+    font-size: 1rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(209, 43, 43);
+    text-align: center;
+}
+
+#message-input {
+    flex-grow: 1;
+    font-size: 1rem;
+    padding: 10px 10px 10px 20px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 5px ;    
+}
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+#status{
+    position: absolute;
+    margin-top: -25px; 
+    margin-left: 15px; 
+    font-size: 1rem;
+    color: rgba(245, 60, 3, 0.918);
+    left: 0;
+    transition: margin-left 0.5s ease;
+}
+
 
 }
