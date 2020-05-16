@@ -5,10 +5,13 @@ const messageContainer=document.getElementById('message-container')
 const messageForm=document.getElementById('send-container')
 const messageInput=document.getElementById('message-input')
 const status = document.getElementById('status')
+const mobName = document.getElementById('name')
+
 
 const name = prompt('whats is your name?')
 appendMessage('You joined','connected')
-socket.emit('new-user',name)
+
+socket.emit('new-user',name || mobName)
 
 socket.on('chat-message', data =>{
     // console.log(data)
