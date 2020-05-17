@@ -3,8 +3,50 @@ body {
     box-sizing: border-box;
     margin: 0;
     display: flex;
+    position: relative;
     justify-content: center;
     font-family: Helvetica, sans-serif;
+}
+.display{
+    display: block;
+    position: absolute;
+    background-color: rgba(57, 61, 56, 0.432);
+    height: 130px;
+    width: 300px;
+    z-index: 100;
+    top: 50%;
+    bottom: 50%;
+    border-radius: 20px;
+}
+.display #take-name{
+    display: flex;
+    padding: 20px 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+#take-name input{
+outline: none;
+border-radius: 20px;
+    margin-top: 10px;
+    height: 20px;
+    padding: 5px 10px;
+}
+#take-name button{
+    margin-top: 10px;
+    border-radius: 20px;
+    height: 30px;
+    border: none;
+    box-shadow: 0px 0px 5px ;
+    background-color: rgba(6, 153, 6, 0.664);
+}
+
+.bg{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.5;
+
 }
 
 #message-container {
@@ -23,10 +65,12 @@ body {
     position: fixed;
     padding-bottom: 50px;
     bottom: 0;
-    background-color: white;
+    /* background-color: white; */
     max-width: 1200px;
     width: 50%;
     display: flex;
+    /* background-color: black; */
+    opacity: 0.5;
 }
 #send-button{
     position: absolute;

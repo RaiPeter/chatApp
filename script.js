@@ -1,15 +1,25 @@
 const socket = io('http://127.0.0.1:3000')
-var timeOut
 
 const messageContainer=document.getElementById('message-container')
 const messageForm=document.getElementById('send-container')
 const messageInput=document.getElementById('message-input')
 const status = document.getElementById('status')
+ const name = document.getElementById('take-name');
+
+// const name = prompt('whats is your name?')
+name.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    const newName = document.getElementById('name').value;
+    appendMessage('You joined','connected')
+    socket.emit('new-user',newName)
+    document.getElementById('display').style.display = 'none';
+    messageContainer.style.opacity = "1";
+    messageForm.style.opacity = '1';
+    document.getElementById('bg').remove()
+})
 
 
-const name = prompt('whats is your name?')
-appendMessage('You joined','connected')
-socket.emit('new-user',name)
+
 
 socket.on('chat-message', data =>{
     // console.log(data)
@@ -69,7 +79,6 @@ function appendMessage(message, userStatus){
 
    socket.on('typing',function(data){
        status.innerHTML = `${data} is typing...`;
-
    })
 
   

@@ -9,15 +9,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="message-container">
+
+  <div class="display" id="display">
+    <form id="take-name">
+      <input type="text" placeholder="Enter your name..." name="name" id="name"> 
+      <button type="submit">Register</button>
+    </form>
   </div>
-  <br>
-  
-  <form id="send-container"> 
-    <div id="status" ></div>
-    <input type="text" autocomplete="off" id="message-input">
-    <button type="submit" id="send-button">Send</button>
-  </form>
- 
+
+  <div class="bg" id="bg"></div>
+
+
+    <div id="message-container"></div>
+    <br>
+    
+    
+    <form id="send-container"> 
+      <div id="status" ></div>
+      <input type="text" autocomplete="off" id="message-input">
+      <button type="submit" id="send-button">Send</button>
+    </form>
+
 </body>
 </html>
