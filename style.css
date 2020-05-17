@@ -271,10 +271,13 @@ typing */
     padding-bottom: 50px;
     bottom: 0;
     height: 2rem;
-    background-color: white;
+    /* background-color: white; */
     max-width: 1200px;
     width: 90%;
     display: flex;
+    opacity: 0.5;
+
+
 }
 #send-button{
     position: absolute;
