@@ -1,4 +1,5 @@
 const io = require('socket.io')(3000)
+var socket = io('https://chat-app-lication.herokuapp.com/');
 
 const users = {}
 
