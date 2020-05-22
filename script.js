@@ -1,4 +1,4 @@
-const socket = io('https://chat-app-lication.herokuapp.com:3000')
+const socket = io('http://127.0.0.1:3000')
 
 const messageContainer=document.getElementById('message-container')
 const messageForm=document.getElementById('send-container')
@@ -12,7 +12,6 @@ name.addEventListener('submit',(e)=>{
     const newName = document.getElementById('name').value;
     appendMessage('You joined','connected')
     socket.emit('new-user',newName)
-
     document.getElementById('display').style.display = 'none';
     document.getElementById('take-name').style.display = 'none';
     messageContainer.style.opacity = "1";
