@@ -13,6 +13,7 @@ name.addEventListener('submit',(e)=>{
     appendMessage('You joined','connected')
     socket.emit('new-user',newName)
     document.getElementById('display').style.display = 'none';
+    document.getElementById('take-name').style.display = 'none';
     messageContainer.style.opacity = "1";
     messageForm.style.opacity = '1';
     document.getElementById('bg').remove()
