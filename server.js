@@ -5,6 +5,12 @@ const users = {}
 io.on('connection', socket =>{
     // console.log('new useer');
 
+    var socketId = socket.id;
+    var clientIp = socket.request.connection.remoteAddress;
+  
+    console.log(socketId);
+    console.log(clientIp);
+
     socket.on('new-user', name =>{
         users[socket.id]=name
         socket.broadcast.emit('user-connected',name)

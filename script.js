@@ -12,6 +12,7 @@ name.addEventListener('submit',(e)=>{
     const newName = document.getElementById('name').value;
     appendMessage('You joined','connected')
     socket.emit('new-user',newName)
+    
     document.getElementById('display').style.display = 'none';
     document.getElementById('take-name').style.display = 'none';
     messageContainer.style.opacity = "1";
