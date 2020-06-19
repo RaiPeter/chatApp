@@ -10,10 +10,12 @@ const status = document.getElementById('status')
 name.addEventListener('submit',(e)=>{
     e.preventDefault()
     const newName = document.getElementById('name').value;
-    appendMessage('You joined','connected')
-    socket.emit('new-user',newName)
     document.getElementById('display').style.display = 'none';
     document.getElementById('take-name').style.display = 'none';
+    
+    appendMessage('You joined','connected')
+    socket.emit('new-user',newName)
+    
     messageContainer.style.opacity = "1";
     messageForm.style.opacity = '1';
     document.getElementById('bg').remove()
